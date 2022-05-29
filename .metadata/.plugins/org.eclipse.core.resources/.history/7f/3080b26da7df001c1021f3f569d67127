@@ -182,7 +182,7 @@ public class Loja {
 			break;
 				
 			default:
-			System.out.println("Departamento não encontrado, programa encerrado, inicie novamente.");
+			System.out.println("Departamento não encontrado, programa encerrado.");
 			
 		}
 		

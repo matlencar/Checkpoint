@@ -2,6 +2,8 @@ package br.com.checkpoint.view;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import br.com.checkpoint.model.Computador;
 import br.com.checkpoint.model.Endereco;
 import br.com.checkpoint.model.Jogos;
@@ -64,19 +66,15 @@ public class Loja {
 			
 			System.out.println("Qual seu nome? ");
 			String nome = leitor.nextLine();
-			venda.setCliente(leitor.nextLine());
+			venda.setCliente(nome);
 		
 			System.out.println("Qual video game você quer comprar? ");
 			String compra = leitor.nextLine();
-			video.setConsole(compra);
+			video.setConsole(leitor.nextLine());
 			
 			System.out.println("Qual a quantidade que deseja comprar? ");
 			int qtd = leitor.nextInt();
 			venda.setQuantidade(qtd);
-			
-			System.out.println("Quantidade no estoque ");
-			int etq = leitor.nextInt();
-			produto.setEstoque(etq);
 			
 			System.out.println("O valor do produto: ");
 			double valor = leitor.nextDouble();
@@ -89,7 +87,6 @@ public class Loja {
 			System.out.println("Quantidade comprada: " + venda.getQuantidade());
 			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
 			System.out.println("Valor total da compra: "+venda.getQuantidade() * produto.getPreco());
-			System.out.println("Produtos restantes em estoque: "+ ((produto.getEstoque() - venda.getQuantidade())));
 			
 			System.out.println("Nome da rua: " + endereco.getRua());
 			System.out.println("Nº : " + endereco.getNumero());
@@ -117,10 +114,6 @@ public class Loja {
 			int qtd2 = leitor.nextInt();
 			venda.setQuantidade(qtd2);
 			
-			System.out.println("Quantidade no estoque ");
-			int etq2 = leitor.nextInt();
-			produto.setEstoque(etq2);
-			
 			System.out.println("O valor do produto: ");
 			double valor2 = leitor.nextDouble();
 			produto.setPreco(valor2);
@@ -131,7 +124,6 @@ public class Loja {
 			System.out.println("Quantidade obtida: " + venda.getQuantidade());
 			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
 			System.out.println("Valor total da compra: "+ venda.getQuantidade() * produto.getPreco());
-			System.out.println("Produtos restantes em estoque: "+ ((produto.getEstoque() - venda.getQuantidade())));
 			
 			System.out.println("Nome da rua: " + endereco.getRua());
 			System.out.println("Nº : " + endereco.getNumero());
@@ -146,7 +138,7 @@ public class Loja {
 			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
 			
 			System.out.println("Qual seu nome? ");
-			String nome3 = leitor.nextLine();
+			String nome3 = leitor.next();
 			venda.setCliente(nome3);
 			
 			System.out.println("Qual computador ou notebook deseja comprar? ");
@@ -156,10 +148,6 @@ public class Loja {
 			System.out.println("Qual a quantidade que deseja comprar? ");
 			int qtd3 = leitor.nextInt();
 			venda.setQuantidade(qtd3);
-			
-			System.out.println("Quantidade no estoque ");
-			int etq3 = leitor.nextInt();
-			produto.setEstoque(etq3);
 			
 			System.out.println("O valor do produto: ");
 			double valor3 = leitor.nextDouble();
@@ -171,7 +159,6 @@ public class Loja {
 			System.out.println("Quantidade obtida: " + venda.getQuantidade());
 			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
 			System.out.println("Valor total da compra: " + venda.getQuantidade() * produto.getPreco());
-			System.out.println("Produtos restantes em estoque: "+ ((produto.getEstoque() - venda.getQuantidade())));
 			
 			System.out.println("Nome da rua: " + endereco.getRua());
 			System.out.println("Nº : " + endereco.getNumero());
@@ -180,13 +167,11 @@ public class Loja {
 			System.out.println("Celular comercial para contato: " + telefone.getCelular());
 			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
 			break;
-				
+			
 			default:
-			System.out.println("Departamento não encontrado, programa encerrado, inicie novamente.");
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
 			
 		}
-		
-		leitor.close();
 		
 	}
 

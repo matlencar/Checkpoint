@@ -2,6 +2,8 @@ package br.com.checkpoint.view;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import br.com.checkpoint.model.Computador;
 import br.com.checkpoint.model.Endereco;
 import br.com.checkpoint.model.Jogos;
@@ -146,7 +148,7 @@ public class Loja {
 			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
 			
 			System.out.println("Qual seu nome? ");
-			String nome3 = leitor.nextLine();
+			String nome3 = leitor.next();
 			venda.setCliente(nome3);
 			
 			System.out.println("Qual computador ou notebook deseja comprar? ");
@@ -180,13 +182,11 @@ public class Loja {
 			System.out.println("Celular comercial para contato: " + telefone.getCelular());
 			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
 			break;
-				
+			
 			default:
-			System.out.println("Departamento não encontrado, programa encerrado, inicie novamente.");
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
 			
 		}
-		
-		leitor.close();
 		
 	}
 

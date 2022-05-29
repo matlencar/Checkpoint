@@ -180,12 +180,11 @@ public class Loja {
 			System.out.println("Celular comercial para contato: " + telefone.getCelular());
 			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
 			break;
-				
+			
 			default:
-			System.out.println("Departamento não encontrado, programa encerrado, inicie novamente.");
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
 			
 		}
-		
 		leitor.close();
 		
 	}

@@ -138,3 +138,1133 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-05-29 20:04:28.758
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.com.checkpoint.view;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import br.com.checkpoint.model.Computador;
+import br.com.checkpoint.model.Endereco;
+import br.com.checkpoint.model.Jogos;
+import br.com.checkpoint.model.Produto;
+import br.com.checkpoint.model.Telefone;
+import br.com.checkpoint.model.Venda;
+import br.com.checkpoint.model.VideoGame;
+
+public class Loja {
+	
+	public static void main(String[] args) {
+		
+		// Instanciando leitor
+		Scanner leitor = new Scanner(System.in);
+
+		// Instanciando endereço
+		Endereco endereco = new Endereco("Avenida Lins de Vasconcelos ", 1220, "Aclimação", "São Paulo");
+
+		// Instanciado telefone
+		Telefone telefone = new Telefone(943302828, 40028000);
+
+		// Instanciando produto
+		Produto produto = new Produto();
+
+		// Instanciando jogos
+		Jogos game = new Jogos();
+
+		// Instanciado computador
+		Computador computador = new Computador();
+
+		// Instanciado video game
+		VideoGame video = new VideoGame();
+
+		// Instanciado venda
+		Venda venda = new Venda();
+		
+		String LojaEletronicos = "fiap conect";
+		
+		String tituloLoja = LojaEletronicos.toUpperCase();
+		
+		System.out.println("\t\t\t\t\t\tOLA SEJA BEM VINDO A "+ tituloLoja);
+		
+		System.out.println("Departamentos que possuimos: ");
+		System.out.println("1 - Departamento de video-games.");
+		System.out.println("2 - Departamento de jogos.");
+		System.out.println("3 - Departamento de computadores.");
+		
+//		System.out.println("Antes de tudo entre com seu nome: ");
+//		String nome = leitor.nextLine();
+//		venda.setCliente(nome);
+		
+		//String nome = JOptionPane.showInputDialog("Digite seu nome");
+		
+		System.out.println("Entre com o numero do Departamento: ");
+		byte departamento = leitor.nextByte();
+		
+		switch(departamento) {
+		
+		case 1: // Departamento video game
+			
+			System.out.println("Qual seu nome? ");
+			String nome = leitor.nextLine();
+			venda.setCliente(leitor.nextLine());
+		
+			System.out.println("Qual video game você quer comprar? ");
+			String compra = leitor.nextLine();
+			video.setConsole(compra);
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd = leitor.nextInt();
+			venda.setQuantidade(qtd);
+			
+			System.out.println("O valor do produto: ");
+			double valor = leitor.nextDouble();
+			produto.setPreco(valor);
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do video-game: " + video.getConsole());
+			System.out.println("Quantidade comprada: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+venda.getQuantidade() * produto.getPreco());
+			System.out.println("Valor total da compra: "+ int(produto.getEstoque() - venda.getQuantidade();
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			
+		
+		break;
+		
+		case 2: // Departamento jogos
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome2 = leitor.nextLine();
+			venda.setCliente(nome2);
+			
+			System.out.println("Qual jogo você quer comprar? ");
+			String compra2 = leitor.nextLine();
+			game.setPlataforma(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd2 = leitor.nextInt();
+			venda.setQuantidade(qtd2);
+			
+			System.out.println("O valor do produto: ");
+			double valor2 = leitor.nextDouble();
+			produto.setPreco(valor2);
+			
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do jogo: " + game.getPlataforma());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+ venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+		case 3:
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome3 = leitor.next();
+			venda.setCliente(nome3);
+			
+			System.out.println("Qual computador ou notebook deseja comprar? ");
+			String compra3 = leitor.nextLine();
+			computador.setMarca(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd3 = leitor.nextInt();
+			venda.setQuantidade(qtd3);
+			
+			System.out.println("O valor do produto: ");
+			double valor3 = leitor.nextDouble();
+			produto.setPreco(valor3);
+			
+			
+			System.out.println("Cliente: " + venda.getCliente());
+			System.out.println("Nome da marca: " + computador.getMarca());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: " + venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+			default:
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
+			
+		}
+		
+	}
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2022-05-29 20:04:29.800
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2022-05-29 20:04:29.833
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:494)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-05-29 20:04:29.955
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.com.checkpoint.view;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import br.com.checkpoint.model.Computador;
+import br.com.checkpoint.model.Endereco;
+import br.com.checkpoint.model.Jogos;
+import br.com.checkpoint.model.Produto;
+import br.com.checkpoint.model.Telefone;
+import br.com.checkpoint.model.Venda;
+import br.com.checkpoint.model.VideoGame;
+
+public class Loja {
+	
+	public static void main(String[] args) {
+		
+		// Instanciando leitor
+		Scanner leitor = new Scanner(System.in);
+
+		// Instanciando endereço
+		Endereco endereco = new Endereco("Avenida Lins de Vasconcelos ", 1220, "Aclimação", "São Paulo");
+
+		// Instanciado telefone
+		Telefone telefone = new Telefone(943302828, 40028000);
+
+		// Instanciando produto
+		Produto produto = new Produto();
+
+		// Instanciando jogos
+		Jogos game = new Jogos();
+
+		// Instanciado computador
+		Computador computador = new Computador();
+
+		// Instanciado video game
+		VideoGame video = new VideoGame();
+
+		// Instanciado venda
+		Venda venda = new Venda();
+		
+		String LojaEletronicos = "fiap conect";
+		
+		String tituloLoja = LojaEletronicos.toUpperCase();
+		
+		System.out.println("\t\t\t\t\t\tOLA SEJA BEM VINDO A "+ tituloLoja);
+		
+		System.out.println("Departamentos que possuimos: ");
+		System.out.println("1 - Departamento de video-games.");
+		System.out.println("2 - Departamento de jogos.");
+		System.out.println("3 - Departamento de computadores.");
+		
+//		System.out.println("Antes de tudo entre com seu nome: ");
+//		String nome = leitor.nextLine();
+//		venda.setCliente(nome);
+		
+		//String nome = JOptionPane.showInputDialog("Digite seu nome");
+		
+		System.out.println("Entre com o numero do Departamento: ");
+		byte departamento = leitor.nextByte();
+		
+		switch(departamento) {
+		
+		case 1: // Departamento video game
+			
+			System.out.println("Qual seu nome? ");
+			String nome = leitor.nextLine();
+			venda.setCliente(leitor.nextLine());
+		
+			System.out.println("Qual video game você quer comprar? ");
+			String compra = leitor.nextLine();
+			video.setConsole(compra);
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd = leitor.nextInt();
+			venda.setQuantidade(qtd);
+			
+			System.out.println("O valor do produto: ");
+			double valor = leitor.nextDouble();
+			produto.setPreco(valor);
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do video-game: " + video.getConsole());
+			System.out.println("Quantidade comprada: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+venda.getQuantidade() * produto.getPreco());
+			System.out.println("Valor total da compra: "+ int(produto.getEstoque() - venda.getQuantidade();
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			
+		
+		break;
+		
+		case 2: // Departamento jogos
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome2 = leitor.nextLine();
+			venda.setCliente(nome2);
+			
+			System.out.println("Qual jogo você quer comprar? ");
+			String compra2 = leitor.nextLine();
+			game.setPlataforma(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd2 = leitor.nextInt();
+			venda.setQuantidade(qtd2);
+			
+			System.out.println("O valor do produto: ");
+			double valor2 = leitor.nextDouble();
+			produto.setPreco(valor2);
+			
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do jogo: " + game.getPlataforma());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+ venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+		case 3:
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome3 = leitor.next();
+			venda.setCliente(nome3);
+			
+			System.out.println("Qual computador ou notebook deseja comprar? ");
+			String compra3 = leitor.nextLine();
+			computador.setMarca(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd3 = leitor.nextInt();
+			venda.setQuantidade(qtd3);
+			
+			System.out.println("O valor do produto: ");
+			double valor3 = leitor.nextDouble();
+			produto.setPreco(valor3);
+			
+			
+			System.out.println("Cliente: " + venda.getCliente());
+			System.out.println("Nome da marca: " + computador.getMarca());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: " + venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+			default:
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
+			
+		}
+		
+	}
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-05-29 20:04:30.002
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-05-29 20:04:30.003
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-05-29 20:04:30.549
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.com.checkpoint.view;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import br.com.checkpoint.model.Computador;
+import br.com.checkpoint.model.Endereco;
+import br.com.checkpoint.model.Jogos;
+import br.com.checkpoint.model.Produto;
+import br.com.checkpoint.model.Telefone;
+import br.com.checkpoint.model.Venda;
+import br.com.checkpoint.model.VideoGame;
+
+public class Loja {
+	
+	public static void main(String[] args) {
+		
+		// Instanciando leitor
+		Scanner leitor = new Scanner(System.in);
+
+		// Instanciando endereço
+		Endereco endereco = new Endereco("Avenida Lins de Vasconcelos ", 1220, "Aclimação", "São Paulo");
+
+		// Instanciado telefone
+		Telefone telefone = new Telefone(943302828, 40028000);
+
+		// Instanciando produto
+		Produto produto = new Produto();
+
+		// Instanciando jogos
+		Jogos game = new Jogos();
+
+		// Instanciado computador
+		Computador computador = new Computador();
+
+		// Instanciado video game
+		VideoGame video = new VideoGame();
+
+		// Instanciado venda
+		Venda venda = new Venda();
+		
+		String LojaEletronicos = "fiap conect";
+		
+		String tituloLoja = LojaEletronicos.toUpperCase();
+		
+		System.out.println("\t\t\t\t\t\tOLA SEJA BEM VINDO A "+ tituloLoja);
+		
+		System.out.println("Departamentos que possuimos: ");
+		System.out.println("1 - Departamento de video-games.");
+		System.out.println("2 - Departamento de jogos.");
+		System.out.println("3 - Departamento de computadores.");
+		
+//		System.out.println("Antes de tudo entre com seu nome: ");
+//		String nome = leitor.nextLine();
+//		venda.setCliente(nome);
+		
+		//String nome = JOptionPane.showInputDialog("Digite seu nome");
+		
+		System.out.println("Entre com o numero do Departamento: ");
+		byte departamento = leitor.nextByte();
+		
+		switch(departamento) {
+		
+		case 1: // Departamento video game
+			
+			System.out.println("Qual seu nome? ");
+			String nome = leitor.nextLine();
+			venda.setCliente(leitor.nextLine());
+		
+			System.out.println("Qual video game você quer comprar? ");
+			String compra = leitor.nextLine();
+			video.setConsole(compra);
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd = leitor.nextInt();
+			venda.setQuantidade(qtd);
+			
+			System.out.println("O valor do produto: ");
+			double valor = leitor.nextDouble();
+			produto.setPreco(valor);
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do video-game: " + video.getConsole());
+			System.out.println("Quantidade comprada: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+venda.getQuantidade() * produto.getPreco());
+			System.out.println("Valor total da compra: "+ int(produto.getEstoque() - venda.getQuantidade();
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			
+		
+		break;
+		
+		case 2: // Departamento jogos
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome2 = leitor.nextLine();
+			venda.setCliente(nome2);
+			
+			System.out.println("Qual jogo você quer comprar? ");
+			String compra2 = leitor.nextLine();
+			game.setPlataforma(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd2 = leitor.nextInt();
+			venda.setQuantidade(qtd2);
+			
+			System.out.println("O valor do produto: ");
+			double valor2 = leitor.nextDouble();
+			produto.setPreco(valor2);
+			
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do jogo: " + game.getPlataforma());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+ venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+		case 3:
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome3 = leitor.next();
+			venda.setCliente(nome3);
+			
+			System.out.println("Qual computador ou notebook deseja comprar? ");
+			String compra3 = leitor.nextLine();
+			computador.setMarca(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd3 = leitor.nextInt();
+			venda.setQuantidade(qtd3);
+			
+			System.out.println("O valor do produto: ");
+			double valor3 = leitor.nextDouble();
+			produto.setPreco(valor3);
+			
+			
+			System.out.println("Cliente: " + venda.getCliente());
+			System.out.println("Nome da marca: " + computador.getMarca());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: " + venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+			default:
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
+			
+		}
+		
+	}
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-05-29 20:04:30.593
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-05-29 20:04:30.594
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:139)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:118)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-05-29 20:04:30.601
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package br.com.checkpoint.view;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import br.com.checkpoint.model.Computador;
+import br.com.checkpoint.model.Endereco;
+import br.com.checkpoint.model.Jogos;
+import br.com.checkpoint.model.Produto;
+import br.com.checkpoint.model.Telefone;
+import br.com.checkpoint.model.Venda;
+import br.com.checkpoint.model.VideoGame;
+
+public class Loja {
+	
+	public static void main(String[] args) {
+		
+		// Instanciando leitor
+		Scanner leitor = new Scanner(System.in);
+
+		// Instanciando endereço
+		Endereco endereco = new Endereco("Avenida Lins de Vasconcelos ", 1220, "Aclimação", "São Paulo");
+
+		// Instanciado telefone
+		Telefone telefone = new Telefone(943302828, 40028000);
+
+		// Instanciando produto
+		Produto produto = new Produto();
+
+		// Instanciando jogos
+		Jogos game = new Jogos();
+
+		// Instanciado computador
+		Computador computador = new Computador();
+
+		// Instanciado video game
+		VideoGame video = new VideoGame();
+
+		// Instanciado venda
+		Venda venda = new Venda();
+		
+		String LojaEletronicos = "fiap conect";
+		
+		String tituloLoja = LojaEletronicos.toUpperCase();
+		
+		System.out.println("\t\t\t\t\t\tOLA SEJA BEM VINDO A "+ tituloLoja);
+		
+		System.out.println("Departamentos que possuimos: ");
+		System.out.println("1 - Departamento de video-games.");
+		System.out.println("2 - Departamento de jogos.");
+		System.out.println("3 - Departamento de computadores.");
+		
+//		System.out.println("Antes de tudo entre com seu nome: ");
+//		String nome = leitor.nextLine();
+//		venda.setCliente(nome);
+		
+		//String nome = JOptionPane.showInputDialog("Digite seu nome");
+		
+		System.out.println("Entre com o numero do Departamento: ");
+		byte departamento = leitor.nextByte();
+		
+		switch(departamento) {
+		
+		case 1: // Departamento video game
+			
+			System.out.println("Qual seu nome? ");
+			String nome = leitor.nextLine();
+			venda.setCliente(leitor.nextLine());
+		
+			System.out.println("Qual video game você quer comprar? ");
+			String compra = leitor.nextLine();
+			video.setConsole(compra);
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd = leitor.nextInt();
+			venda.setQuantidade(qtd);
+			
+			System.out.println("O valor do produto: ");
+			double valor = leitor.nextDouble();
+			produto.setPreco(valor);
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do video-game: " + video.getConsole());
+			System.out.println("Quantidade comprada: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+venda.getQuantidade() * produto.getPreco());
+			System.out.println("Valor total da compra: "+ int(produto.getEstoque() - venda.getQuantidade();
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			
+		
+		break;
+		
+		case 2: // Departamento jogos
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome2 = leitor.nextLine();
+			venda.setCliente(nome2);
+			
+			System.out.println("Qual jogo você quer comprar? ");
+			String compra2 = leitor.nextLine();
+			game.setPlataforma(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd2 = leitor.nextInt();
+			venda.setQuantidade(qtd2);
+			
+			System.out.println("O valor do produto: ");
+			double valor2 = leitor.nextDouble();
+			produto.setPreco(valor2);
+			
+			
+			System.out.println("Nome do cliente: " + venda.getCliente());
+			System.out.println("Nome do jogo: " + game.getPlataforma());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: "+ venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+		case 3:
+			
+			System.out.println("\t\t\t\t\t\tDADOS DA NOTA FISCAL DA LOJA: ");
+			
+			System.out.println("Qual seu nome? ");
+			String nome3 = leitor.next();
+			venda.setCliente(nome3);
+			
+			System.out.println("Qual computador ou notebook deseja comprar? ");
+			String compra3 = leitor.nextLine();
+			computador.setMarca(leitor.nextLine());
+			
+			System.out.println("Qual a quantidade que deseja comprar? ");
+			int qtd3 = leitor.nextInt();
+			venda.setQuantidade(qtd3);
+			
+			System.out.println("O valor do produto: ");
+			double valor3 = leitor.nextDouble();
+			produto.setPreco(valor3);
+			
+			
+			System.out.println("Cliente: " + venda.getCliente());
+			System.out.println("Nome da marca: " + computador.getMarca());
+			System.out.println("Quantidade obtida: " + venda.getQuantidade());
+			System.out.println("Preço pago pelo produto: " +"R$"+ produto.getPreco());
+			System.out.println("Valor total da compra: " + venda.getQuantidade() * produto.getPreco());
+			
+			System.out.println("Nome da rua: " + endereco.getRua());
+			System.out.println("Nº : " + endereco.getNumero());
+			System.out.println("Bairro: " + endereco.getBairro());
+			System.out.println("Cidade: " + endereco.getCidade());
+			System.out.println("Celular comercial para contato: " + telefone.getCelular());
+			System.out.println("Telefone comercial para contato: " + telefone.getTelefone());
+			break;
+			
+			default:
+			System.out.println("Departamento não encontrado, tente digitar o numero do departamento correto.");
+			
+		}
+		
+	}
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2022-05-29 20:04:30.602
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2022-05-29 20:04:30.602
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2031)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3795)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1943)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1974)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3052)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3116)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3347)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1524)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:323)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1231)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:820)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:272)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:264)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:197)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:187)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -19,6 +19,20 @@ public class Venda  {
 		this.quantidade = quantidade;
 		this.video = video;
 	}
+	
+	// Tirar a quantidade do estoque e retornar o valor a ser pago
+		public int vendaFinalizada() {
+			getProduto().setEstoque(getProduto().getEstoque() - quantidade);
+			return quantidade;
+				
+		}
+
+		
+
+	@Override
+		public String toString() {
+			return "Venda [cliente=" + cliente + ", produto=" + produto + ", quantidade=" + quantidade + "]";
+		}
 
 	// Getters and Setters
 	public String getCliente() {
