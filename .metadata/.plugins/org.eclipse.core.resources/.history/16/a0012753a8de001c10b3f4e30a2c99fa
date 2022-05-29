@@ -1,0 +1,37 @@
+package br.com.fiap.checkpoint.model;
+
+public class Produtos {
+	
+	private String nomeString;
+	private double preco;
+	private int estoque;
+	private String sabor;
+	
+	//Getters and setters
+	public String getNomeString() {
+		return nomeString;
+	}
+	public void setNomeString(String nomeString) {
+		this.nomeString = nomeString;
+	}
+	public double getPreco() {
+		return preco;
+	}
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	public int getEstoque() {
+		return estoque;
+	}
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
+	}
+	public String getSabor() {
+		return sabor;
+	}
+	public void setSabor(String sabor) {
+		this.sabor = sabor;
+	}
+	
+	
+}

@@ -1,0 +1,24 @@
+package br.com.fiap.checkpoint.model;
+
+public class Lanches {
+	
+	//Atributos
+	private String opcoes;
+	private String recheio;
+	
+	//Getters and Setters
+	public String getOpcoes() {
+		return opcoes;
+	}
+	public void setOpcoes(String opcoes) {
+		this.opcoes = opcoes;
+	}
+	public String getRecheio() {
+		return recheio;
+	}
+	public void setRecheio(String recheio) {
+		this.recheio = recheio;
+	}
+	
+	
+}

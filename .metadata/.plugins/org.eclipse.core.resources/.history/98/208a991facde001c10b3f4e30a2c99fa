@@ -1,0 +1,8 @@
+package br.com.fiap.checkpoint.model;
+
+public class Lanches {
+	
+	//Atributos
+	private String opcoes;
+	private String recheio;
+}

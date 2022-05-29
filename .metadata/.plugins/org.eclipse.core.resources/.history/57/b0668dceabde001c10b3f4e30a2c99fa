@@ -1,0 +1,8 @@
+package br.com.fiap.checkpoint.model;
+
+public class Salgados extends Produtos{
+	
+	//Atributos
+	private String recheio;
+	
+}

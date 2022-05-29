@@ -1,0 +1,11 @@
+package br.com.checkpoint.model;
+
+public class Produto {
+	
+	//Atributos
+	private String nome;
+	private double preco;
+	private int estoque;
+	
+	//Getters and Setters
+}

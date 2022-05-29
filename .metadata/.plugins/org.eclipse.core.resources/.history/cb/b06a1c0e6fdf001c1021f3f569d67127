@@ -1,0 +1,25 @@
+package br.com.checkpoint.view;
+
+import java.util.Scanner;
+
+import br.com.checkpoint.model.Endereco;
+import br.com.checkpoint.model.Produto;
+import br.com.checkpoint.model.Telefone;
+
+public class Loja {
+	
+	//Instanciando leitor
+	Scanner leitor = new Scanner(System.in);
+	
+	//Instanciando endereço
+	Endereco enderco = new Endereco("Avenida Lins de Vasconcelos ", 1220," - Aclimação"," - São Paulo");
+	
+	//Instanciado telefone
+	Telefone telefone = new Telefone(943302828, 40028000);
+	
+	//Instanciando produto
+	Produto produto = new Produto()
+	
+	//Instanciando video game
+	VideoGame = game = new VideoGame()
+}

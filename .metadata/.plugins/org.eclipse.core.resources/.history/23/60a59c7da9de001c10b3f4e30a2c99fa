@@ -1,0 +1,17 @@
+package br.com.fiap.checkpoint.model;
+
+public class Pao {
+	
+	private String tipos;
+	
+	//Getters and Setters
+	public String getTipos() {
+		return tipos;
+	}
+
+	public void setTipos(String tipos) {
+		this.tipos = tipos;
+	}
+	
+	
+}

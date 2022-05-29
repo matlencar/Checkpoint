@@ -1,0 +1,27 @@
+package br.com.fiap.checkpoint.model;
+
+public class Vendas {
+	
+	//Atributos
+	private String cliente;
+	private Produtos produtos;
+	private String formaPagamento;
+	private int quantidade;
+	
+	//Construtor sobrecarga
+	public Vendas() {
+	}
+	
+	//Construtor
+	public Vendas(String cliente, Produtos produtos, String formaPagamento, int quantidade) {
+		super();
+		this.cliente = cliente;
+		this.produtos = produtos;
+		this.formaPagamento = formaPagamento;
+		this.quantidade = quantidade;
+	}
+	
+	
+	
+	
+}

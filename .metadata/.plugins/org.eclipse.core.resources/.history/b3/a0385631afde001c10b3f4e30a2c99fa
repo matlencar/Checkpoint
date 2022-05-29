@@ -1,0 +1,50 @@
+package br.com.fiap.checkpoint.view;
+
+import java.util.Scanner;
+
+import br.com.fiap.checkpoint.model.Bebidas;
+import br.com.fiap.checkpoint.model.Doce;
+import br.com.fiap.checkpoint.model.Estabelecimento;
+import br.com.fiap.checkpoint.model.Frios;
+import br.com.fiap.checkpoint.model.Lanches;
+import br.com.fiap.checkpoint.model.Pao;
+import br.com.fiap.checkpoint.model.Salgados;
+import br.com.fiap.checkpoint.model.Vendas;
+
+public class Padaria {
+
+	public static void main(String[] args) {
+		
+		// Instanciando Scanner
+				Scanner leitor = new Scanner(System.in);
+
+		// Instanciando estabelecimento
+		Estabelecimento padoca = new Estabelecimento("Rua Vergueiro",100," Vila Mariana"," São Paulo",953461324);
+
+		// Intanciando salgados
+		Salgados salgados = new Salgados();
+
+		// Instanciando doces
+		Doce doces = new Doce();
+				
+		//Instanciando frios
+		Frios frios = new Frios();
+				
+		//Intanciando bebidas
+		Bebidas bebidas = new Bebidas();
+				
+		//Instanciando o pao
+		Pao pao = new Pao();
+				
+		//Instanciando Lanches
+		Lanches lanches = new Lanches();
+				
+		//Instanciando o pagamento
+		Vendas pagamento = new Vendas();
+		
+		//Instanciando o metodo de valor a ser pago pelo cliente
+		double total = pagamento.vendaFinalizada();
+
+	}
+
+}

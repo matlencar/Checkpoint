@@ -1,0 +1,10 @@
+package br.com.fiap.checkpoint.model;
+
+public class Console {
+	
+	private String plataforma;
+	private String acessorios;
+	
+	
+	
+}

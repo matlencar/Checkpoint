@@ -1,0 +1,18 @@
+package br.com.fiap.checkpoint.model;
+
+public class Doce extends Produtos {
+	
+	//Atributos
+	private String recheio;
+
+	//Getters and Setters
+	public String getRecheio() {
+		return recheio;
+	}
+
+	public void setRecheio(String recheio) {
+		this.recheio = recheio;
+	}
+	
+	
+}

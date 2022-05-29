@@ -1,0 +1,10 @@
+package br.com.fiap.checkpoint.model;
+
+public class Hardware {
+	
+	private String drive;
+	private String memoriaRam;
+	private String placaMae;
+	private String processador;
+	private String ssd;
+}

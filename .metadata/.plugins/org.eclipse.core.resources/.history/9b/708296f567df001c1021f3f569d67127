@@ -1,0 +1,9 @@
+package br.com.checkpoint.model;
+
+public class VideoGame extends Produto {
+	
+	//Atributo
+	private String console;
+	private String acessorios;
+	
+}

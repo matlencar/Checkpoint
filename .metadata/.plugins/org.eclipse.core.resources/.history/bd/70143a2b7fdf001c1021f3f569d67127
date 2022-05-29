@@ -1,0 +1,26 @@
+package br.com.checkpoint.model;
+
+public class VideoGame extends Produto {
+
+	// Atributo
+	private String acessorios;
+
+	// Construtor
+	public VideoGame(String nome, double preco, int estoque,  String acessorios) {
+		super(nome, preco, estoque);
+		this.acessorios = acessorios;
+	}
+
+	// Construtor vazio
+	public VideoGame() {}
+
+	// Getters and Setters
+	public String getAcessorios() {
+		return acessorios;
+	}
+
+	public void setAcessorios(String acessorios) {
+		this.acessorios = acessorios;
+	}
+
+}

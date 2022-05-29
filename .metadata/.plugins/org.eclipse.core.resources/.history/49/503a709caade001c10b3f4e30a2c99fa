@@ -1,0 +1,24 @@
+package br.com.fiap.checkpoint.model;
+
+public class Frios {
+	
+	//Atributos
+	private String embutidos;
+	private String queijos;
+	
+	//Getters and Setters
+	public String getEmbutidos() {
+		return embutidos;
+	}
+	public void setEmbutidos(String embutidos) {
+		this.embutidos = embutidos;
+	}
+	public String getQueijos() {
+		return queijos;
+	}
+	public void setQueijos(String queijos) {
+		this.queijos = queijos;
+	}
+	
+	
+}

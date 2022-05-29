@@ -1,0 +1,9 @@
+package br.com.fiap.checkpoint.model;
+
+public class Produtos {
+	
+	private String nomeString;
+	private double preco;
+	private int estoque;
+	private String sabor;
+}

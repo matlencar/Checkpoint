@@ -1,0 +1,22 @@
+package br.com.fiap.checkpoint.model;
+
+public class Salgados extends Produtos {
+
+	// Atributos
+	private String recheio;
+	
+	
+	//Construtor sobrecarga
+	public Salgados() {
+	}
+
+	// Getters and Setters
+	public String getRecheio() {
+		return recheio;
+	}
+
+	public void setRecheio(String recheio) {
+		this.recheio = recheio;
+	}
+
+}

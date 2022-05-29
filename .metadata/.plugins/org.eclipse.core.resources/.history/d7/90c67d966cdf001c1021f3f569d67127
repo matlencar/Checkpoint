@@ -1,0 +1,12 @@
+package br.com.checkpoint.model;
+
+import br.com.fiap.checkpoint.model.Produtos;
+
+public class Venda {
+	
+	//Atributos
+	private String cliente;
+	private Produto produto;
+	private String formaPagamento;
+	private int quantidade;
+}

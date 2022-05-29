@@ -1,0 +1,22 @@
+package br.com.checkpoint.model;
+
+public class Jogos extends Produto {
+	
+	private String plataforma;
+	
+	
+	//Construtor vazio
+	public Jogos() {
+	}
+
+	//Getters and Setters
+	public String getPlataforma() {
+		return plataforma;
+	}
+
+	public void setPlataforma(String plataforma) {
+		this.plataforma = plataforma;
+	}
+	
+	
+}

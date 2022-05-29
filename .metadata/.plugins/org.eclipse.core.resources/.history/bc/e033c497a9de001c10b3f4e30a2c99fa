@@ -1,0 +1,21 @@
+package br.com.fiap.checkpoint.model;
+
+public class Pao extends Produtos {
+
+	private String tipos;
+	
+	
+	//Construtor sobrecarga
+	public Pao() {
+	}
+
+	// Getters and Setters
+	public String getTipos() {
+		return tipos;
+	}
+
+	public void setTipos(String tipos) {
+		this.tipos = tipos;
+	}
+
+}

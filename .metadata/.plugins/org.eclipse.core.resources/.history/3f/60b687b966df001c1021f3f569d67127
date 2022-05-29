@@ -1,0 +1,6 @@
+package br.com.checkpoint.model;
+
+public class Endereco {
+	
+	//Atributos
+}
