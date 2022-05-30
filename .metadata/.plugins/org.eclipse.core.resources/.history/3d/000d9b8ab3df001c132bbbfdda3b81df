@@ -107,7 +107,7 @@ public class Loja {
 			
 			System.out.println("Qual seu nome? ");
 			String nome2 = leitor.nextLine();
-			venda.setCliente(leitor.nextLine());
+			venda.setCliente(nome2);
 			
 			System.out.println("Qual jogo você quer comprar? ");
 			String compra2 = leitor.nextLine();
@@ -147,7 +147,7 @@ public class Loja {
 			
 			System.out.println("Qual seu nome? ");
 			String nome3 = leitor.nextLine();
-			venda.setCliente(leitor.nextLine());
+			venda.setCliente(nome3);
 			
 			System.out.println("Qual computador ou notebook deseja comprar? ");
 			String compra3 = leitor.nextLine();

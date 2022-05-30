@@ -107,11 +107,11 @@ public class Loja {
 			
 			System.out.println("Qual seu nome? ");
 			String nome2 = leitor.nextLine();
-			venda.setCliente(leitor.nextLine());
+			venda.setCliente(nome2);
 			
 			System.out.println("Qual jogo você quer comprar? ");
 			String compra2 = leitor.nextLine();
-			game.setPlataforma(compra2);
+			game.setPlataforma(leitor.nextLine());
 			
 			System.out.println("Qual a quantidade que deseja comprar? ");
 			int qtd2 = leitor.nextInt();
@@ -147,11 +147,11 @@ public class Loja {
 			
 			System.out.println("Qual seu nome? ");
 			String nome3 = leitor.nextLine();
-			venda.setCliente(leitor.nextLine());
+			venda.setCliente(nome3);
 			
 			System.out.println("Qual computador ou notebook deseja comprar? ");
 			String compra3 = leitor.nextLine();
-			computador.setMarca(compra3);
+			computador.setMarca(leitor.nextLine());
 			
 			System.out.println("Qual a quantidade que deseja comprar? ");
 			int qtd3 = leitor.nextInt();
